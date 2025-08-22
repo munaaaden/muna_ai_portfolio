@@ -380,7 +380,7 @@
 
   <a class="top-btn" href="#top" aria-label="Back to top">↑</a>
 
-  <script>
+    <script>
     // Update year
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -394,7 +394,8 @@
       a.setAttribute('href', url);
       a.textContent = 'View submission';
     }
-      // Optional: set a custom photo and/or initials for the hero avatar later
+
+    // Optional: set a custom photo and/or initials for the hero avatar later
     // Example: setAvatar('https://example.com/photo.jpg', 'MA')
     window.setAvatar = function(url, initials){
       var el = document.getElementById('avatar');
@@ -402,6 +403,10 @@
       if(initials){ var s = el.querySelector('span'); if(s) s.textContent = initials; }
       if(url){ el.style.backgroundImage = 'url("'+url+'")'; el.classList.add('has-img'); }
     }
+
+    // Set avatar image from your GitHub repo (raw file URL for direct loading)
+    setAvatar('https://raw.githubusercontent.com/munaaaden/muna_ai_portfolio/main/IMG_9844.jpg','MA');
   </script>
 </body>
 </html>
+
