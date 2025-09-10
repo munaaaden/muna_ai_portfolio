@@ -1,166 +1,729 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <title>Generative AI for Work &amp; Research — Portfolio | Dr. Muna A. Aden</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Generative AI for Work & Research — Portfolio | Dr. Muna A. Aden</title>
-  <meta name="description" content="One‑page portfolio for the Generative AI for Work & Research course: about Dr. Muna A. Aden, the course, and weekly submissions." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <meta name="robots" content="index,follow" />
+  <meta name="generator" content="GrapesJS Studio" />
+  <meta name="description"
+    content="One‑page portfolio for the Generative AI for Work & Research course: about Dr. Muna A. Aden, the course, and weekly submissions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet" />
   <style>
-    :root{
-      --bg-1:#0f1020; /* deep indigo */
-      --bg-2:#0b122b; /* night blue */
-      --grad-a:#7c4dff; /* purple */
-      --grad-b:#00e5ff; /* cyan */
-      --grad-c:#00ffa3; /* mint */
-      --ink-1:#e8ebff; /* near-white */
-      --ink-2:#b9c0ff; /* soft */
-      --card:rgba(255,255,255,.06);
-      --glass:rgba(255,255,255,.08);
-      --stroke:rgba(255,255,255,.15);
-      --shadow:0 10px 30px rgba(0,0,0,.35), 0 2px 10px rgba(0,0,0,.25);
-      --radius:20px;
-      --maxw:1100px;
-      scroll-behavior:smooth;
-      color-scheme:dark;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji"; 
-      color:var(--ink-1); background:linear-gradient(180deg,var(--bg-1),var(--bg-2)) fixed; 
-      overflow-x:hidden; 
-    }
-    /* Floating gradient orbs */
-    .bg-orbs::before,.bg-orbs::after{
-      content:""; position:fixed; inset:auto; width:60vmax; height:60vmax; filter:blur(60px); z-index:-2; opacity:.35; pointer-events:none;
-      background:radial-gradient(circle at 30% 30%, var(--grad-a), transparent 60%),
-                 radial-gradient(circle at 70% 40%, var(--grad-b), transparent 60%),
-                 radial-gradient(circle at 30% 70%, var(--grad-c), transparent 60%);
-      transform:translate(-20%, -20%);
-      animation:float 22s ease-in-out infinite alternate;
-    }
-    .bg-orbs::after{ left:auto; right:-20vmin; top:auto; bottom:-20vmin; transform:translate(20%,20%); animation-duration:28s; opacity:.28 }
-    @keyframes float{ from{ transform:translate(-10%, -8%) rotate(0.5deg)} to{ transform:translate(6%, 4%) rotate(-0.5deg)} }
-
-    .container{ max-width:var(--maxw); margin-inline:auto; padding:0 22px }
-    .site-header{ position:sticky; top:0; z-index:999; backdrop-filter:saturate(160%) blur(8px); background:linear-gradient(180deg, rgba(12,14,34,.75), rgba(12,14,34,.45)); border-bottom:1px solid var(--stroke) }
-    .nav{ display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 0 }
-    .brand{ display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--ink-1) }
-    .logo{
-      width:38px; height:38px; border-radius:12px; background:conic-gradient(from 120deg, var(--grad-a), var(--grad-b), var(--grad-c)); box-shadow:var(--shadow);
-    }
-    .brand-title{ font-weight:800; letter-spacing:.3px }
-    .nav a{ color:var(--ink-1); text-decoration:none; padding:8px 12px; border-radius:12px; opacity:.9 }
-    .nav a:hover{ background:var(--glass)}
-    .nav-links{ display:flex; gap:4px; align-items:center; flex-wrap:wrap }
-
-    .hero{ position:relative; padding:68px 0 48px; }
-    .eyebrow{ font-size:.9rem; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-2) }
-    .title{ font-family:"Playfair Display",serif; font-size:clamp(2rem, 4vw + 1rem, 3.4rem); margin:.35em 0 .25em; line-height:1.08; }
-    .title .gradient{ background:linear-gradient(90deg, var(--grad-a), var(--grad-b), var(--grad-c)); -webkit-background-clip:text; background-clip:text; color:transparent }
-    .subtitle{ color:var(--ink-2); font-size:1.05rem; max-width:70ch }
-    .cta-row{ display:flex; gap:12px; flex-wrap:wrap; margin-top:24px }
-    .btn{ display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:14px; border:1px solid var(--stroke); background:var(--glass); box-shadow:var(--shadow); color:var(--ink-1); text-decoration:none; font-weight:600 }
-    .btn.primary{ background:linear-gradient(135deg, rgba(124,77,255,.25), rgba(0,229,255,.18)); border-color:transparent }
-    .btn:focus-visible{ outline:3px solid #00e5ff55; outline-offset:2px }
-
-    section{ scroll-margin-top:88px; }
-    .section{ padding:56px 0 }
-    .card{ background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.04)); border:1px solid var(--stroke); border-radius:var(--radius); box-shadow:var(--shadow) }
-
-    .grid{ display:grid; gap:18px }
-    .grid.two{ grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)) }
-    .grid.three{ grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)) }
-
-    .sec-head{ display:flex; align-items:end; justify-content:space-between; gap:18px; margin-bottom:18px }
-    .sec-title{ font-family:"Playfair Display",serif; font-size:clamp(1.5rem, 1.4rem + 1vw, 2.2rem) }
-    .sec-kicker{ color:var(--ink-2) }
-
-    .about-wrap{ display:grid; grid-template-columns: 1.15fr .85fr; gap:18px }
-    @media (max-width: 880px){ .about-wrap{ grid-template-columns:1fr } }
-
-    .pill{ display:inline-block; padding:8px 12px; border-radius:999px; background:linear-gradient(135deg, rgba(124,77,255,.15), rgba(0,229,255,.10)); border:1px solid var(--stroke); font-size:.95rem; margin:6px 6px 0 0 }
-
-    .list{ padding-left:18px; line-height:1.6 }
-
-    .kpi{ display:flex; align-items:center; gap:12px }
-    .kpi .dot{ width:10px; height:10px; border-radius:50%; background:linear-gradient(135deg, var(--grad-b), var(--grad-c)); box-shadow:0 0 0 3px rgba(0,229,255,.18) }
-
-    .course-card h3{ margin:0 0 6px }
-    .muted{ color:var(--ink-2) }
-
-    .weeks{ display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:16px }
-    .week{ position:relative; padding:18px; border-radius:16px; border:1px dashed var(--stroke); background:rgba(255,255,255,.03) }
-    .week h4{ margin:.25rem 0 .5rem }
-    .tag{ font-size:.8rem; padding:.2rem .55rem; border-radius:999px; background:rgba(124,77,255,.2); display:inline-block; border:1px solid var(--stroke) }
-    .week a{ display:inline-block; margin-top:.6rem; padding:9px 12px; border-radius:10px; text-decoration:none; border:1px solid var(--stroke); color:var(--ink-1); background:var(--glass) }
-    .week a.disabled{ opacity:.6; pointer-events:none; }
-
-    .projects{ display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:16px }
-    .project{ padding:18px; border-radius:16px; border:1px solid var(--stroke); background:rgba(255,255,255,.04) }
-    .project a{ color:var(--ink-1); text-decoration:none }
-
-    footer{ padding:36px 0 64px; color:var(--ink-2) }
-    .footer-inner{ display:flex; align-items:flex-start; justify-content:space-between; gap:16px; flex-wrap:wrap }
-    .tiny{ font-size:.9rem }
-
-    .top-btn{
-      position:fixed; right:18px; bottom:18px; z-index:999; border-radius:999px; padding:12px 14px; border:1px solid var(--stroke); background:linear-gradient(135deg, rgba(124,77,255,.28), rgba(0,229,255,.18));
-      box-shadow:var(--shadow); text-decoration:none; color:var(--ink-1)
+    * {
+      box-sizing: border-box;
     }
 
-    .divider{ height:1px; background:linear-gradient(90deg, transparent, var(--stroke), transparent); margin:28px 0 }
-      /* --- theme-inspired additions: neon CTA, hero split layout, avatar, brand chips --- */
-    :root{ --neon:#31d16a; --neon-dk:#1f9e4e }
-    .hero-grid{ display:grid; grid-template-columns:1.2fr .8fr; align-items:center; gap:28px }
-    @media (max-width: 900px){ .hero-grid{ grid-template-columns:1fr; gap:22px } }
-    .btn.green{ background:linear-gradient(180deg, var(--neon), var(--neon-dk)); border:0; color:#fff; box-shadow:0 10px 28px rgba(31,158,78,.35), 0 0 0 3px rgba(49,209,106,.18) inset; transition:transform .15s ease, box-shadow .2s ease }
-    .btn.green:hover{ transform:translateY(-1px); box-shadow:0 16px 38px rgba(31,158,78,.45), 0 0 0 3px rgba(49,209,106,.24) inset }
-    .btn.ctabig{ padding:16px 22px; font-size:1.05rem; letter-spacing:.2px; border-radius:14px }
-    .avatar{ width:min(320px,36vw); aspect-ratio:1/1; border-radius:50%; position:relative; display:grid; place-items:center; margin-inline:auto; background:
-      radial-gradient(60% 60% at 35% 35%, rgba(255,255,255,.18), transparent 60%),
-      radial-gradient(80% 80% at 70% 30%, rgba(0,229,255,.16), transparent 60%),
-      linear-gradient(135deg, rgba(124,77,255,.25), rgba(0,229,255,.18));
-      border:1px solid var(--stroke); box-shadow:var(--shadow) }
-    .avatar::after{ content:""; position:absolute; inset:-6px; border-radius:inherit; background:conic-gradient(from 120deg, var(--grad-a), var(--grad-b), var(--grad-c)); filter:blur(10px); opacity:.35; z-index:-1 }
-    .avatar span{ font-family:"Playfair Display",serif; font-weight:700; font-size:clamp(2rem,3vw+1rem,3rem); color:var(--ink-1) }
-    .avatar.has-img{ background-size:cover; background-position:center; background-repeat:no-repeat }
-    .avatar.has-img span{ opacity:0 }
-    .brands{ margin-top:28px; display:grid; grid-template-columns:repeat(auto-fit, minmax(160px,1fr)); gap:12px }
-    .brandchip{ height:54px; display:flex; align-items:center; justify-content:center; border-radius:14px; border:1px solid var(--stroke); background:rgba(255,255,255,.03); color:var(--ink-2); font-weight:600; letter-spacing:.3px }
+    body {
+      margin: 0;
+    }
+
+    :root {
+      --gjs-t-color-primary: #cf549e;
+      --gjs-t-color-secondary: #b9227d;
+      --gjs-t-color-accent: #ffb347;
+      --gjs-t-color-success: #28a745;
+      --gjs-t-color-warning: #ffc107;
+      --gjs-t-color-error: #dc3545;
+      --bg-1: #0f1020;
+      undefined: undefined;
+      --bg-2: #0b122b;
+      --grad-a: #7c4dff;
+      --grad-b: #00e5ff;
+      --grad-c: #00ffa3;
+      --ink-1: #e8ebff;
+      --ink-2: #b9c0ff;
+      --card: rgba(255, 255, 255, .06);
+      --glass: rgba(255, 255, 255, .08);
+      --stroke: rgba(255, 255, 255, .15);
+      --shadow: 0 10px 30px rgba(0, 0, 0, .35), 0 2px 10px rgba(0, 0, 0, .25);
+      --radius: 20px;
+      --maxw: 1100px;
+      scroll-behavior: smooth;
+      color-scheme: dark;
+      --neon: #31d16a;
+      --neon-dk: #1f9e4e;
+    }
+
+    body {
+      background-color: #e7e7e7;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      margin: 0;
+      color: var(--ink-1);
+      background: linear-gradient(180deg, var(--bg-1), var(--bg-2)) fixed;
+      overflow-x: hidden;
+    }
+
+    .head {
+      padding: 50px 50px 35px;
+    }
+
+    .logo {
+      height: 38px;
+      display: block;
+      margin: 0 auto;
+      width: 38px;
+      border-radius: 12px;
+      background: conic-gradient(from 120deg, var(--grad-a), var(--grad-b), var(--grad-c));
+      box-shadow: var(--shadow);
+    }
+
+    .card {
+      max-width: 700px;
+      padding: 40px 45px;
+      background-color: white;
+      border-radius: var(--radius);
+      margin: 0 auto;
+      background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .04));
+      border: 1px solid var(--stroke);
+      box-shadow: var(--shadow);
+    }
+
+    .title {
+      margin: .35em 0 .25em;
+      text-align: center;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2rem, 4vw + 1rem, 3.4rem);
+      line-height: 1.08;
+    }
+
+    .gjs-t-body {
+      background-color: inherit;
+      color: inherit;
+      font-size: 1rem;
+      line-height: 1.75rem;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .subtitle {
+      text-align: center;
+      margin: 0;
+      padding: 25px 0;
+      color: var(--ink-2);
+      font-size: 1.05rem;
+      max-width: 70ch;
+    }
+
+    .paragraph {
+      line-height: 1.5;
+      margin-bottom: 40px;
+    }
+
+    .link {
+      color: #af4e8a;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .gjs-t-h1 {
+      color: var(--gjs-t-color-secondary);
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+    }
+
+    .button {
+      display: block;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      text-align: center;
+      border-width: 0;
+    }
+
+    .gjs-t-h2 {
+      color: #601843;
+      font-size: 1.2rem;
+      line-height: 1.75rem;
+    }
+
+    .gjs-t-button {
+      background-color: var(--gjs-t-color-primary);
+      color: white;
+      border-radius: 0.3rem;
+    }
+
+    .gjs-t-link {
+      color: var(--gjs-t-color-primary);
+      text-decoration: underline;
+    }
+
+    .gjs-t-border {
+      border-radius: 0.3rem;
+      border-color: #e0e0e0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    .bg-orbs::before {
+      content: "";
+      position: fixed;
+      inset: auto;
+      width: 60vmax;
+      height: 60vmax;
+      filter: blur(60px);
+      z-index: -2;
+      opacity: .35;
+      pointer-events: none;
+      background: radial-gradient(circle at 30% 30%, var(--grad-a), transparent 60%),
+        radial-gradient(circle at 70% 40%, var(--grad-b), transparent 60%),
+        radial-gradient(circle at 30% 70%, var(--grad-c), transparent 60%);
+      transform: translate(-20%, -20%);
+      animation: float 22s ease-in-out infinite alternate;
+    }
+
+    .bg-orbs::after {
+      content: "";
+      position: fixed;
+      inset: auto;
+      width: 60vmax;
+      height: 60vmax;
+      filter: blur(60px);
+      z-index: -2;
+      opacity: .28;
+      pointer-events: none;
+      background: radial-gradient(circle at 30% 30%, var(--grad-a), transparent 60%),
+        radial-gradient(circle at 70% 40%, var(--grad-b), transparent 60%),
+        radial-gradient(circle at 30% 70%, var(--grad-c), transparent 60%);
+      transform: translate(20%, 20%);
+      animation: float 22s ease-in-out infinite alternate;
+      left: auto;
+      right: -20vmin;
+      top: auto;
+      bottom: -20vmin;
+      animation-duration: 28s;
+    }
+
+    .container {
+      max-width: var(--maxw);
+      margin-inline: auto;
+      padding: 0 22px;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      backdrop-filter: saturate(160%) blur(8px);
+      background: linear-gradient(180deg, rgba(12, 14, 34, .75), rgba(12, 14, 34, .45));
+      border-bottom: 1px solid var(--stroke);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--ink-1);
+    }
+
+    .brand-title {
+      font-weight: 800;
+      letter-spacing: .3px;
+    }
+
+    .nav a {
+      color: var(--ink-1);
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 12px;
+      opacity: .9;
+    }
+
+    .nav a:hover {
+      background: var(--glass);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .hero {
+      position: relative;
+      padding: 68px 0 48px;
+    }
+
+    .eyebrow {
+      font-size: .9rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--ink-2);
+    }
+
+    .title .gradient {
+      background: linear-gradient(90deg, var(--grad-a), var(--grad-b), var(--grad-c));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 14px;
+      border: 1px solid var(--stroke);
+      background: var(--glass);
+      box-shadow: var(--shadow);
+      color: var(--ink-1);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .btn.primary {
+      background: linear-gradient(135deg, rgba(124, 77, 255, .25), rgba(0, 229, 255, .18));
+      border-color: transparent;
+    }
+
+    .btn:focus-visible {
+      outline: 3px solid #00e5ff55;
+      outline-offset: 2px;
+    }
+
+    section {
+      scroll-margin-top: 88px;
+    }
+
+    .section {
+      padding: 56px 0;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid.two {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .grid.three {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .sec-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .sec-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.5rem, 1.4rem + 1vw, 2.2rem);
+    }
+
+    .sec-kicker {
+      color: var(--ink-2);
+    }
+
+    .about-wrap {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 18px;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(124, 77, 255, .15), rgba(0, 229, 255, .10));
+      border: 1px solid var(--stroke);
+      font-size: .95rem;
+      margin: 6px 6px 0 0;
+    }
+
+    .list {
+      padding-left: 18px;
+      line-height: 1.6;
+    }
+
+    .kpi {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .kpi .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--grad-b), var(--grad-c));
+      box-shadow: 0 0 0 3px rgba(0, 229, 255, .18);
+    }
+
+    .course-card h3 {
+      margin: 0 0 6px;
+    }
+
+    .muted {
+      color: var(--ink-2);
+    }
+
+    .weeks {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .week {
+      position: relative;
+      padding: 18px;
+      border-radius: 16px;
+      border: 1px dashed var(--stroke);
+      background: rgba(255, 255, 255, .03);
+    }
+
+    .week h4 {
+      margin: .25rem 0 .5rem;
+    }
+
+    .tag {
+      font-size: .8rem;
+      padding: .2rem .55rem;
+      border-radius: 999px;
+      background: rgba(124, 77, 255, .2);
+      display: inline-block;
+      border: 1px solid var(--stroke);
+    }
+
+    .week a {
+      display: inline-block;
+      margin-top: .6rem;
+      padding: 9px 12px;
+      border-radius: 10px;
+      text-decoration: none;
+      border: 1px solid var(--stroke);
+      color: var(--ink-1);
+      background: var(--glass);
+    }
+
+    .week a.disabled {
+      opacity: .6;
+      pointer-events: none;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .project {
+      padding: 18px;
+      border-radius: 16px;
+      border: 1px solid var(--stroke);
+      background: rgba(255, 255, 255, .04);
+    }
+
+    .project a {
+      color: var(--ink-1);
+      text-decoration: none;
+    }
+
+    footer {
+      padding: 36px 0 64px;
+      color: var(--ink-2);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .tiny {
+      font-size: .9rem;
+    }
+
+    .top-btn {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 999;
+      border-radius: 999px;
+      padding: 12px 14px;
+      border: 1px solid var(--stroke);
+      background: linear-gradient(135deg, rgba(124, 77, 255, .28), rgba(0, 229, 255, .18));
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      color: var(--ink-1);
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--stroke), transparent);
+      margin: 28px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .btn.green {
+      background: linear-gradient(180deg, var(--neon), var(--neon-dk));
+      border: 0;
+      color: #fff;
+      box-shadow: 0 10px 28px rgba(31, 158, 78, .35), 0 0 0 3px rgba(49, 209, 106, .18) inset;
+      transition: transform .15s ease, box-shadow .2s ease;
+    }
+
+    .btn.green:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 38px rgba(31, 158, 78, .45), 0 0 0 3px rgba(49, 209, 106, .24) inset;
+    }
+
+    .btn.ctabig {
+      padding: 16px 22px;
+      font-size: 1.05rem;
+      letter-spacing: .2px;
+      border-radius: 14px;
+    }
+
+    .avatar {
+      width: min(320px, 36vw);
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      position: relative;
+      display: grid;
+      place-items: center;
+      margin-inline: auto;
+      background: radial-gradient(60% 60% at 35% 35%, rgba(255, 255, 255, .18), transparent 60%),
+        radial-gradient(80% 80% at 70% 30%, rgba(0, 229, 255, .16), transparent 60%),
+        linear-gradient(135deg, rgba(124, 77, 255, .25), rgba(0, 229, 255, .18));
+      border: 1px solid var(--stroke);
+      box-shadow: var(--shadow);
+    }
+
+    .avatar::after {
+      content: "";
+      position: absolute;
+      inset: -6px;
+      border-radius: inherit;
+      background: conic-gradient(from 120deg, var(--grad-a), var(--grad-b), var(--grad-c));
+      filter: blur(10px);
+      opacity: .35;
+      z-index: -1;
+    }
+
+    .avatar span {
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+      font-size: clamp(2rem, 3vw+1rem, 3rem);
+      color: var(--ink-1);
+    }
+
+    .avatar.has-img {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .avatar.has-img span {
+      opacity: 0;
+    }
+
+    .brands {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+    }
+
+    .brandchip {
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      border: 1px solid var(--stroke);
+      background: rgba(255, 255, 255, .03);
+      color: var(--ink-2);
+      font-weight: 600;
+      letter-spacing: .3px;
+    }
+
+    .gjs-t-body {
+      background-color: inherit;
+      color: inherit;
+      font-size: 1rem;
+      line-height: 1.75rem;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .gjs-t-h1 {
+      color: var(--gjs-t-color-secondary);
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+    }
+
+    .gjs-t-h2 {
+      color: #601843;
+      font-size: 1.2rem;
+      line-height: 1.75rem;
+    }
+
+    .gjs-t-button {
+      background-color: var(--gjs-t-color-primary);
+      color: white;
+      border-radius: 0.3rem;
+    }
+
+    .gjs-t-link {
+      color: var(--gjs-t-color-primary);
+      text-decoration: underline;
+    }
+
+    .gjs-t-border {
+      border-radius: 0.3rem;
+      border-color: #e0e0e0;
+    }
+
+    #i28vi {
+      padding: 28px;
+    }
+
+    #ijmex {
+      margin-top: 14px;
+    }
+
+    #idx7i {
+      padding: 22px;
+    }
+
+    #ik6n92 {
+      margin-top: 0;
+    }
+
+    #izunvu {
+      margin-top: 12px;
+    }
+
+    #iuyvzh {
+      padding: 22px;
+    }
+
+    #i84r1f {
+      padding: 22px;
+    }
+
+    #i5hfyg {
+      padding: 22px;
+    }
+
+    #idya6a {
+      margin-top: 0;
+    }
+
+    #ihtqeb {
+      padding: 18px;
+    }
+
+    #ickk6t {
+      margin-top: 0;
+    }
+
+    #ipbi7i {
+      padding: 18px;
+    }
+
+    #idlzwj {
+      margin-top: 0;
+    }
+
+    #i86wmf {
+      padding: 18px;
+    }
+
+    @keyframes float {
+      from {
+        transform: translate(-10%, -8%) rotate(0.5deg);
+      }
+
+      to {
+        transform: translate(6%, 4%) rotate(-0.5deg);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+    }
+
+    @media (max-width: 880px) {
+      .about-wrap {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
+
 <body class="bg-orbs">
   <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="#top" aria-label="Home">
-        <div class="logo" aria-hidden="true"></div>
-        <span class="brand-title">Generative AI for Work & Research — Portfolio</span>
+    <div class="container nav"><a href="#top" aria-label="Home" class="brand">
+        <div aria-hidden="true" class="logo"></div>
+        <span class="brand-title">Generative AI for Work &amp; Research — Portfolio</span>
       </a>
-      <nav class="nav-links" aria-label="Main">
-        <a href="#about-me">About me</a>
-        <a href="#about-course">About the course</a>
-        <a href="#weekly">Weekly submissions</a>
-      </nav>
+      <nav aria-label="Main" class="nav-links"><a href="#about-me">About me</a><a href="#about-course">About the
+          course</a><a href="#weekly">Weekly submissions</a></nav>
     </div>
   </header>
-
   <main id="top">
     <section class="hero">
       <div class="container">
-        <div class="card" style="padding:28px;">
+        <div id="i28vi" class="card">
           <div class="hero-grid">
             <div>
               <div class="eyebrow">Portfolio · Live cohort</div>
-              <h1 class="title">Dr. Muna A. Aden — <span class="gradient">Generative AI for Work & Research</span></h1>
-              <p class="subtitle">Public health physician & epidemiologist applying AI to research, surveillance, and data‑driven decision‑making. This site tracks my journey through the course and curates weekly work products.</p>
-              <div class="cta-row">
-                <a class="btn green ctabig" href="#weekly">Let’s get started →</a>
-              </div>
-              <div class="brands" aria-label="Affiliations & partners">
+              <h1 class="title">Dr. Muna A. Aden — <span class="gradient">Generative AI for Work &amp; Research</span>
+              </h1>
+              <p class="subtitle">Public health physician &amp; epidemiologist applying AI to research, surveillance,
+                and data‑driven decision‑making. This site tracks my journey through the course and curates weekly work
+                products.</p>
+              <div class="cta-row"><a href="#weekly" class="btn green ctabig">Let’s get started →</a></div>
+              <div aria-label="Affiliations & partners" class="brands">
                 <div class="brandchip">Nairobi City County</div>
                 <div class="brandchip">Africa CDC</div>
                 <div class="brandchip">LSHTM</div>
@@ -168,94 +731,85 @@
               </div>
             </div>
             <div>
-              <div class="avatar" id="avatar" aria-label="Profile avatar"><span>MA</span></div>
+              <div id="avatar" aria-label="Profile avatar" class="avatar"><span>MA</span></div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- About Me -->
+    </section><!-- About Me -->
     <section id="about-me" class="section">
       <div class="container">
         <div class="sec-head">
           <h2 class="sec-title">About me</h2>
           <div class="sec-kicker">Nairobi · Epidemiology · Data · AI</div>
         </div>
-
         <div class="about-wrap">
-          <article class="card" style="padding:22px;">
+          <article id="idx7i" class="card">
             <p>
-              I’m a public health practitioner with a track record in emergency operations, epidemiology & surveillance, research, and analytics. I lead and collaborate on data‑driven initiatives, mentor teams, and translate evidence into action across health systems.
+              I’m a public health practitioner with a track record in emergency operations, epidemiology &amp;
+              surveillance, research, and analytics. I lead and collaborate on data‑driven initiatives, mentor teams,
+              and translate evidence into action across health systems.
             </p>
             <ul class="list">
-              <li class="kpi"><span class="dot"></span>Experience: Africa CDC Rapid Responder; Nairobi Health Directorate (Head, Research & Data Science); National PHE Programs Officer (CDC liaison); Head of Surveillance & Epidemiology (NMS).</li>
-              <li class="kpi"><span class="dot"></span>Education & advanced training: MBChB; MSc Control of Infectious Diseases (LSHTM); Harvard GCSRT; Imperial College modelling; Advanced Epi (R); Data Science & AI (ongoing).</li>
-              <li class="kpi"><span class="dot"></span>Publications & projects: AI‑based clinical decision support; LLM benchmark representativeness; emergency preparedness coordination; HIV program studies.</li>
+              <li class="kpi"><span class="dot"></span>Experience: Africa CDC Rapid Responder; Nairobi Health
+                Directorate (Head, Research &amp; Data Science); National PHE Programs Officer (CDC liaison); Head of
+                Surveillance &amp; Epidemiology (NMS).</li>
+              <li class="kpi"><span class="dot"></span>Education &amp; advanced training: MBChB; MSc Control of
+                Infectious Diseases (LSHTM); Harvard GCSRT; Imperial College modelling; Advanced Epi (R); Data Science
+                &amp; AI (ongoing).</li>
+              <li class="kpi"><span class="dot"></span>Publications &amp; projects: AI‑based clinical decision support;
+                LLM benchmark representativeness; emergency preparedness coordination; HIV program studies.</li>
             </ul>
-
             <div class="divider"></div>
-            <div>
-              <strong>Core strengths</strong>
+            <div><strong>Core strengths</strong>
               <div>
-                <span class="pill">Data analysis (R, Python, Power BI)</span>
-                <span class="pill">Spatial & routine data (QGIS, DHIS2)</span>
-                <span class="pill">Biosecurity & biosafety</span>
-                <span class="pill">Emergency operations (PHEOC)</span>
-                <span class="pill">Research design & M&E</span>
-                <span class="pill">AI for health & research</span>
+                <span class="pill">Data analysis (R, Python, Power BI)</span><span class="pill">Spatial &amp; routine data (QGIS, DHIS2)</span><span class="pill">Biosecurity &amp; biosafety</span><span class="pill">Emergency operations (PHEOC)</span><span class="pill">Research design &amp; M&amp;E</span><span class="pill">AI for health &amp; research</span>
               </div>
             </div>
-
-            <div style="margin-top:14px">
-              <strong>Languages</strong>
+            <div id="ijmex"><strong>Languages</strong>
               <div>
-                <span class="pill">English</span>
-                <span class="pill">Kiswahili</span>
-                <span class="pill">Arabic</span>
-                <span class="pill">Somali</span>
+                <span class="pill">English</span><span class="pill">Kiswahili</span><span class="pill">Arabic</span><span class="pill">Somali</span>
               </div>
             </div>
           </article>
-
-          <aside class="card" style="padding:22px;">
-            <h3 style="margin-top:0">Featured work</h3>
-            <p class="muted tiny">Selected public dashboards & notebooks.</p>
+          <aside id="iuyvzh" class="card">
+            <h3 id="ik6n92">Featured work</h3>
+            <p class="muted tiny">Selected public dashboards &amp; notebooks.</p>
             <div class="projects">
               <div class="project">
-                <h4><a href="https://munaaaden.github.io/Cholera_WASH_Indicators_Dashboard/" target="_blank" rel="noopener">Cholera WASH Indicators Dashboard</a></h4>
+                <h4><a href="https://munaaaden.github.io/Cholera_WASH_Indicators_Dashboard/" target="_blank"
+                    rel="noopener">Cholera WASH Indicators Dashboard</a></h4>
                 <p class="muted tiny">Exploratory indicators and visuals for WASH‑related cholera risk monitoring.</p>
               </div>
               <div class="project">
-                <h4><a href="https://munaaaden.github.io/gapminder_dashboard/" target="_blank" rel="noopener">Gapminder Dashboard</a></h4>
+                <h4><a href="https://munaaaden.github.io/gapminder_dashboard/" target="_blank" rel="noopener">Gapminder
+                    Dashboard</a></h4>
                 <p class="muted tiny">Interactive charts for global development trends.</p>
               </div>
               <div class="project">
-                <h4><a href="https://munaaaden.github.io/Ebola_Modelling_Dash/" target="_blank" rel="noopener">Ebola Modelling Dashboard</a></h4>
-                <p class="muted tiny">Toy compartment models & scenario visualisation.</p>
+                <h4><a href="https://munaaaden.github.io/Ebola_Modelling_Dash/" target="_blank" rel="noopener">Ebola
+                    Modelling Dashboard</a></h4>
+                <p class="muted tiny">Toy compartment models &amp; scenario visualisation.</p>
               </div>
             </div>
-            <p class="tiny muted" style="margin-top:12px">(Direct email is intentionally omitted on this page.)</p>
+            <p id="izunvu" class="tiny muted">(Direct email is intentionally omitted on this page.)</p>
           </aside>
         </div>
       </div>
-    </section>
-
-    <!-- About the Course -->
+    </section><!-- About the Course -->
     <section id="about-course" class="section">
       <div class="container">
         <div class="sec-head">
           <h2 class="sec-title">About the course</h2>
           <div class="sec-kicker">8‑week live cohort · No‑code to practical AI</div>
         </div>
-
         <div class="grid two">
-          <article class="card course-card" style="padding:22px;">
+          <article id="i84r1f" class="card course-card">
             <h3>Bootcamp features</h3>
             <ul class="list">
-              <li>Weekly live workshops & help sessions</li>
+              <li>Weekly live workshops &amp; help sessions</li>
               <li>Private community and personalized feedback</li>
-              <li>Capstone project coaching & public showcase</li>
+              <li>Capstone project coaching &amp; public showcase</li>
               <li>Shareable certificate and lifetime tutorial access</li>
             </ul>
             <div class="divider"></div>
@@ -263,110 +817,103 @@
             <ul class="list">
               <li>Online quizzes — 15%</li>
               <li>Workshop assignments — 35%</li>
-              <li>Attendance & participation — 10% (≥5 workshops)</li>
+              <li>Attendance &amp; participation — 10% (≥5 workshops)</li>
               <li>Final project — 40% (passing ≥80%)</li>
             </ul>
           </article>
-
-          <article class="card course-card" style="padding:22px;">
+          <article id="i5hfyg" class="card course-card">
             <h3>Modules</h3>
             <ol class="list">
-              <li><strong>Websites, documents & presentations:</strong> LLM basics; generate Markdown/LaTeX/HTML; simple research websites; AI tools for scientific comms.</li>
-              <li><strong>AI‑automated data analysis:</strong> Code Interpreter & Julius; dashboards; dataset processing; automated reports; spreadsheet automations.</li>
-              <li><strong>GenAI for research & text analysis:</strong> literature search (Elicit, LiteRev); classification; sentiment; knowledge maps; summarisation pipelines.</li>
-              <li><strong>Custom GPTs & chatbots:</strong> context windows, RAG; Botpress; knowledge base integration.</li>
+              <li><strong>Websites, documents &amp; presentations:</strong> LLM basics; generate Markdown/LaTeX/HTML;
+                simple research websites; AI tools for scientific comms.</li>
+              <li><strong>AI‑automated data analysis:</strong> Code Interpreter &amp; Julius; dashboards; dataset
+                processing; automated reports; spreadsheet automations.</li>
+              <li><strong>GenAI for research &amp; text analysis:</strong> literature search (Elicit, LiteRev);
+                classification; sentiment; knowledge maps; summarisation pipelines.</li>
+              <li><strong>Custom GPTs &amp; chatbots:</strong> context windows, RAG; Botpress; knowledge base
+                integration.</li>
               <li><strong>AI for task automation:</strong> email flows; agents; browser control for web tasks.</li>
-              <li><strong>Communication & outreach:</strong> summaries for different audiences; figures; video abstracts; visualization prompts; content scheduling.</li>
-              <li><strong>Capstone & showcase:</strong> progress checks; peer review; final presentation & Q&A.</li>
+              <li><strong>Communication &amp; outreach:</strong> summaries for different audiences; figures; video
+                abstracts; visualization prompts; content scheduling.</li>
+              <li><strong>Capstone &amp; showcase:</strong> progress checks; peer review; final presentation &amp;
+                Q&amp;A.</li>
             </ol>
-            <p class="tiny muted">Provider: GRAPH Courses (University of Geneva). External contact details intentionally not listed here.</p>
+            <p class="tiny muted">Provider: GRAPH Courses (University of Geneva). External contact details intentionally
+              not listed here.</p>
           </article>
         </div>
       </div>
-    </section>
-
-    <!-- Weekly Submissions -->
+    </section><!-- Weekly Submissions -->
     <section id="weekly" class="section">
       <div class="container">
         <div class="sec-head">
           <h2 class="sec-title">My weekly submissions</h2>
           <div class="sec-kicker">Placeholders — links will be added after each workshop</div>
         </div>
-
         <div class="weeks">
           <!-- 8 weeks -->
-          <div class="week">
-            <span class="tag">Week 1</span>
-            <h4>LLM fundamentals & research website</h4>
-            <p class="muted tiny">Outline, simple site scaffold.</p>
-            <a id="week-1" class="disabled" href="#" aria-disabled="true">Coming soon</a>
+          <div class="week"><span class="tag">Week 1</span>
+            <h4>LLM fundamentals &amp; research website</h4>
+            <p class="muted tiny">Outline, simple site scaffold.</p><a id="week-1"
+              href="https://munaaaden.github.io/muna_ai_portfolio/" title="" target="">Click Here</a>
           </div>
-          <div class="week">
-            <span class="tag">Week 2</span>
-            <h4>Automated data analysis</h4>
-            <p class="muted tiny">Notebook & generated report.</p>
-            <a id="week-2" class="disabled" href="#" aria-disabled="true">Coming soon</a>
+          <div id="i37kqk" class="week"><span id="i05mbm" class="tag">Week 2</span>
+            <h4 id="ivoxe4">Automated data analysis</h4>
+            <p id="iy9uav" class="muted tiny">Notebook &amp; generated report.</p><a id="week-2" href="#">Coming
+              soon</a>
           </div>
-          <div class="week">
-            <span class="tag">Week 3</span>
-            <h4>Literature review & text analysis</h4>
-            <p class="muted tiny">Pipelines & syntheses.</p>
-            <a id="week-3" class="disabled" href="#" aria-disabled="true">Coming soon</a>
+          <div class="week"><span class="tag">Week 3</span>
+            <h4>Literature review &amp; text analysis</h4>
+            <p class="muted tiny">Pipelines &amp; syntheses.</p><a id="week-3" href="#" aria-disabled="true"
+              class="disabled">Coming soon</a>
           </div>
-          <div class="week">
-            <span class="tag">Week 4</span>
+          <div class="week"><span class="tag">Week 4</span>
             <h4>Custom GPT / RAG assistant</h4>
-            <p class="muted tiny">Prototype chatbot.</p>
-            <a id="week-4" class="disabled" href="#" aria-disabled="true">Coming soon</a>
+            <p class="muted tiny">Prototype chatbot.</p><a id="week-4" href="#" aria-disabled="true"
+              class="disabled">Coming soon</a>
           </div>
-          <div class="week">
-            <span class="tag">Week 5</span>
-            <h4>Task automation & agents</h4>
-            <p class="muted tiny">Automation demo.</p>
-            <a id="week-5" class="disabled" href="#" aria-disabled="true">Coming soon</a>
+          <div class="week"><span class="tag">Week 5</span>
+            <h4>Task automation &amp; agents</h4>
+            <p class="muted tiny">Automation demo.</p><a id="week-5" href="#" aria-disabled="true"
+              class="disabled">Coming soon</a>
           </div>
-          <div class="week">
-            <span class="tag">Week 6</span>
-            <h4>Communication & visuals</h4>
-            <p class="muted tiny">Figures & brief explainer.</p>
-            <a id="week-6" class="disabled" href="#" aria-disabled="true">Coming soon</a>
+          <div class="week"><span class="tag">Week 6</span>
+            <h4>Communication &amp; visuals</h4>
+            <p class="muted tiny">Figures &amp; brief explainer.</p><a id="week-6" href="#" aria-disabled="true"
+              class="disabled">Coming soon</a>
           </div>
-          <div class="week">
-            <span class="tag">Week 7</span>
+          <div class="week"><span class="tag">Week 7</span>
             <h4>Capstone progress</h4>
-            <p class="muted tiny">Milestone report.</p>
-            <a id="week-7" class="disabled" href="#" aria-disabled="true">Coming soon</a>
+            <p class="muted tiny">Milestone report.</p><a id="week-7" href="#" aria-disabled="true"
+              class="disabled">Coming soon</a>
           </div>
-          <div class="week">
-            <span class="tag">Week 8</span>
-            <h4>Final project & showcase</h4>
-            <p class="muted tiny">Slide deck & recording.</p>
-            <a id="week-8" class="disabled" href="#" aria-disabled="true">Coming soon</a>
+          <div class="week"><span class="tag">Week 8</span>
+            <h4>Final project &amp; showcase</h4>
+            <p class="muted tiny">Slide deck &amp; recording.</p><a id="week-8" href="#" aria-disabled="true"
+              class="disabled">Coming soon</a>
           </div>
         </div>
       </div>
     </section>
-
-    <section class="section" aria-labelledby="extras-title">
+    <section aria-labelledby="extras-title" class="section">
       <div class="container">
         <h2 id="extras-title" class="sec-title">Extras</h2>
         <div class="grid three">
-          <div class="card" style="padding:18px;">
-            <h3 style="margin-top:0">Focus areas</h3>
-            <p class="muted tiny">AI for surveillance, outbreak response, dashboards, and M&E.</p>
+          <div id="ihtqeb" class="card">
+            <h3 id="idya6a">Focus areas</h3>
+            <p class="muted tiny">AI for surveillance, outbreak response, dashboards, and M&amp;E.</p>
           </div>
-          <div class="card" style="padding:18px;">
-            <h3 style="margin-top:0">Affiliations</h3>
+          <div id="ipbi7i" class="card">
+            <h3 id="ickk6t">Affiliations</h3>
             <p class="tiny muted">KMA · KMPDU · RSTMH · GRAPH Network</p>
           </div>
-          <div class="card" style="padding:18px;">
-            <h3 style="margin-top:0">Location</h3>
+          <div id="i86wmf" class="card">
+            <h3 id="idlzwj">Location</h3>
             <p class="tiny muted">Nairobi, Kenya</p>
           </div>
         </div>
       </div>
     </section>
-
     <footer>
       <div class="container footer-inner">
         <div>
@@ -376,11 +923,8 @@
         <div class="tiny">Built without frameworks.</div>
       </div>
     </footer>
-  </main>
-
-  <a class="top-btn" href="#top" aria-label="Back to top">↑</a>
-
-    <script>
+  </main><a href="#top" aria-label="Back to top" class="top-btn">↑</a>
+  <script>
     // Update year
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -408,7 +952,7 @@
     setAvatar('https://raw.githubusercontent.com/munaaaden/muna_ai_portfolio/main/IMG_9844.jpg','MA');
   </script>
   <script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js" defer></script>
-<script src="https://files.bpcontent.cloud/2025/09/10/05/20250910051739-VU6OWUAA.js" defer></script>
+  <script src="https://files.bpcontent.cloud/2025/09/10/05/20250910051739-VU6OWUAA.js" defer></script>
 </body>
-</html>
 
+</html>
